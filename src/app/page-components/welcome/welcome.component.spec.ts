@@ -1,10 +1,10 @@
-import { AppComponent } from "./app.component";
+import { WelcomeComponent } from './welcome.component';
 
 describe('WelcomeComponent', () => {
-  let component: AppComponent;
+  let component: WelcomeComponent;
 
   beforeEach(() => {
-    component = new AppComponent();
+    component = new WelcomeComponent();
   });
 
   it('should create', () => {
