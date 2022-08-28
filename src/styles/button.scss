@@ -1,0 +1,16 @@
+.et-button {
+    @apply 
+    w-full 
+    border 
+    border-transparent 
+    bg-primary
+    rounded-md 
+    text-white 
+    py-2 
+    px-5 
+    flex 
+    justify-center 
+    font-medium 
+    text-3xl
+    hover:bg-gray-500;
+}

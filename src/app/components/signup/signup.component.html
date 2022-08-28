@@ -1,0 +1,72 @@
+<div class="bg-dark400">
+    <p class="text-6xl sm:text-7xl font-medium md:text-9xl ">mao-indy
+        <!-- <span class="text-4xl font-medium">.com</span> -->
+    </p>
+    <p class="text-4xl p-5 ">Let's be indy!</p>
+    <form [formGroup]="formGroup" class="p-6 grid gap-6 max-w-md w-full" autocomplete="off">
+        <div class="col-span-12">
+            <label class="block et-lebel">Mobile number</label>
+            <input id="mobile-number" type="text" class="block mt-1 et-textbox" formControlName="mobileNumber">
+            <div class="text-red-900" *ngIf="mobileNumberForm.invalid && (mobileNumberForm.dirty || mobileNumberForm.touched)">
+                <div *ngIf="mobileNumberForm.errors?.['required']">
+                    Required
+                </div>
+                <div *ngIf="mobileNumberForm.errors?.['pattern']">
+                    Must be number only
+                </div>
+                <div *ngIf="mobileNumberForm.errors?.['maxlength']">
+                    Max 50
+                </div>
+            </div>
+        </div>
+        <div class="col-span-12">
+            <div class="flex items-end">
+                <label class="et-lebel">Password</label>
+            </div>
+            <input id="password" type="password" class="block mt-1 et-textbox" formControlName="password">
+            <div class="text-red-900" *ngIf="passwordForm.invalid && (passwordForm.dirty || passwordForm.touched)">
+                <div *ngIf="passwordForm.errors?.['required']">
+                    Required
+                </div>
+                <div *ngIf="passwordForm.errors?.['minlength']">
+                    Atleast 6 alphabets
+                </div>
+                <div *ngIf="passwordForm.errors?.['maxlength']">
+                    Max 50
+                </div>
+            </div>
+        </div>
+        <div class="col-span-12">
+            <label class="block et-lebel">Profile name</label>
+            <div class="block ">can change any time</div>
+            <input id="profile-name" type="text" class="block mt-1 et-textbox" formControlName="profileName">
+            <div class="text-red-900" *ngIf="profileNameForm.invalid && (profileNameForm.dirty || profileNameForm.touched)">
+                <div *ngIf="profileNameForm.errors?.['required']">
+                    Required
+                </div>
+                <div *ngIf="profileNameForm.errors?.['maxlength']">
+                    Max 50
+                </div>
+            </div>
+        </div>
+        <div class="col-span-12">
+            <label class="block et-lebel">Username</label>
+            <div class="block flex">
+                <div class="text-4xl font-medium">@</div><input id="username" type="text" class="mt-1 ml-1 et-textbox" formControlName="username">
+            </div>
+            <div class="text-red-900" *ngIf="usernameForm.invalid && (usernameForm.dirty || usernameForm.touched)">
+                <div *ngIf="usernameForm.errors?.['required']">
+                    Required
+                </div>
+                <div *ngIf="usernameForm.errors?.['pattern']">
+                    Small English alphabets, underscore or number
+                </div>
+                <div *ngIf="usernameForm.errors?.['maxlength']">
+                    Max 50
+                </div>
+            </div>
+        </div>
+        <button type="button" class="col-span-12 et-button mt-3 disabled:opacity-50 ">Sign up</button>
+        <!-- (click)="signup()" -->
+    </form>
+</div>

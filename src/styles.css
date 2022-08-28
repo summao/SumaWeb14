@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import 'assets/fonts';
+@import 'styles/textbox.scss';
+@import 'styles/button.scss';
